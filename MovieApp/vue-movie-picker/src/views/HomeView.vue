@@ -23,10 +23,16 @@
 </template>
 
 <script>
-
+import { ref } from "vue";
 
 export default {
+  setup() {
+    const search = ref("")
 
+    return {
+      search
+    }
+  }
 }
 </script>
 
