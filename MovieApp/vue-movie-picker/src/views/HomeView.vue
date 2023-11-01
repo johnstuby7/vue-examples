@@ -10,8 +10,13 @@
         <p>Naruto Uzumaki, a mischievous adolescent ninja, struggles as he searches for recognition and dreams of becoming
           the Hokage, the village's leader and strongest ninja.</p>
       </div>
-      <router-link />
+      <!-- <router-link to="/movies" /> -->
     </div>
+
+    <form @submit.prevent="" class="search">
+      <input type="text" placeholder="What are you looking for?">
+      <input type="submit" value="Search">
+    </form>
   </div>
 </template>
 
