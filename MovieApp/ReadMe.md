@@ -1,0 +1,7 @@
+- to create the project make a empty folder
+- run npm i -g @vue/cli
+- vue create vue-movie-db-yt
+- select manual option and select babel, router, css pre-processors and linter/formatter
+- navigate to the new folder and run the server and ensure it works
+- create a env.js file in src to hold the omdb api key, this is the movie api db
+-
