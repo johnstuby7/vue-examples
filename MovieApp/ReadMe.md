@@ -49,3 +49,8 @@ header {
 }
 </style>
 ```
+
+Make a omdbapi account
+get the free version
+copy the apikey you got to a new file called env.js
+ensure that you activate your key through the email you recieve
