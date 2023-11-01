@@ -26,7 +26,7 @@
             <div class="type">{{ movie.Type }}</div>
           </div>
           <div class="detail">
-            <p class="y">{{ movie.Year }}</p>
+            <p class="year">{{ movie.Year }}</p>
             <h3>{{ movie.Title }}</h3>
           </div>
         </router-link>
@@ -182,6 +182,24 @@ export default {
             bottom: 16px;
             left: 0px;
             text-transform: capitalize;
+          }
+        }
+
+        .detail {
+          background-color: #496583;
+          padding: 16px 8px;
+          flex: 1 1 100%;
+          border-radius: 0px 0px 8px 8px;
+
+          .year {
+            color: #AAA;
+            font-size: 14px;
+          }
+
+          h3 {
+            color: #FFF;
+            font-weight: 600;
+            font-size: 18px;
           }
         }
       }
