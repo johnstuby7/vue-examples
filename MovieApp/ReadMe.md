@@ -4,4 +4,5 @@
 - select manual option and select babel, router, css pre-processors and linter/formatter
 - navigate to the new folder and run the server and ensure it works
 - create a env.js file in src to hold the omdb api key, this is the movie api db
--
+- remove the components and assets folder and update app to just have the routerview
+- Add <router-link to="/"></router-link> to app for the default route
