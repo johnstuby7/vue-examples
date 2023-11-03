@@ -1,6 +1,14 @@
 <template>
   <aside>
-    Sidebar
+    <div class="logo">
+      <img src="../assets/vue.svg" alt="Vue">
+    </div>
+
+    <div class="menu-toggle-wrap">
+      <button class="menu-toggle">
+        <span class="material-icons"></span>
+      </button>
+    </div>
   </aside>
 </template>
 
@@ -12,7 +20,7 @@
 aside {
   display: flex;
   flex-direction: column;
-  width: var(--sidebar-width);
+  width: calc(2rem + 32px);
   min-height: 100vh;
   overflow: hidden;
   padding: 1rem;
@@ -21,6 +29,14 @@ aside {
   color: var(--light);
 
   transition: 0.2s ease-out;
+
+  .logo {
+    margin-bottom: 1rem;
+
+    img {
+      width: 2rem;
+    }
+  }
 
   @media (max-width: 768px) {
     position: fixed;
