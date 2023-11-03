@@ -53,13 +53,26 @@ aside {
     position: relative;
     top: 0;
     transition: 0.2s ease-out;
+
+    .menu-toggle {
+      transition: 0.2s ease-out;
+
+      .material-icons {
+        font-size: 2rem;
+        color: var(--light);
+      }
+    }
   }
 
   &.is_expanded {
     width: var(--sidebar-width);
 
     .menu-toggle-wrap {
-      top: -3rem
+      top: -3rem;
+
+      .menu-toggle {
+        transform: rotate(-180deg);
+      }
     }
   }
 
