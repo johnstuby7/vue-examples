@@ -1,19 +1,26 @@
 <template>
-  <aside>
+  <aside :class="`${is_expanded && 'is_expanded'}`">
     <div class="logo">
       <img src="../assets/vue.svg" alt="Vue">
     </div>
 
     <div class="menu-toggle-wrap">
       <button class="menu-toggle">
-        <span class="material-icons"></span>
+        <span class="material-icons" @click="ToggleMenu">
+          keyboard_double_arrow_right
+        </span>
       </button>
     </div>
   </aside>
 </template>
 
 <script setup>
+import { ref } from "vue"
 
+const is_expanded = ref(false)
+const ToggleMenu = () => {
+  is_expanded.value = !is_expanded.value
+}
 </script>
 
 <style lang="scss" scoped>
@@ -35,6 +42,24 @@ aside {
 
     img {
       width: 2rem;
+    }
+  }
+
+  .menu-toggle-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+
+    position: relative;
+    top: 0;
+    transition: 0.2s ease-out;
+  }
+
+  &.is_expanded {
+    width: var(--sidebar-width);
+
+    .menu-toggle-wrap {
+      top: -3rem
     }
   }
 
