@@ -1,15 +1,18 @@
 <template>
   <div class="app">
+    <!-- Sidebar -->
     <Sidebar />
+
+    <!-- Content -->
     <router-view />
   </div>
 </template>
 
 <script setup>
-import Sidebar from "./components/Sidebar.vue"
-
+import Sidebar from './components/Sidebar.vue'
 </script>
-<style Lang="scss">
+
+<style lang="scss">
 :root {
   --primary: #4ade80;
   --primary-alt: #22c55e;
@@ -24,11 +27,11 @@ import Sidebar from "./components/Sidebar.vue"
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Fira sans', 'sans-serif';
+  font-family: 'Fira sans', sans-serif;
 }
 
 body {
-  background: var(--light)
+  background: var(--light);
 }
 
 button {
@@ -46,8 +49,8 @@ button {
     flex: 1 1 0;
     padding: 2rem;
 
-    @media (max-width: 768px) {
-      padding-left: 6rem
+    @media (max-width: 1024px) {
+      padding-left: 6rem;
     }
   }
 }
