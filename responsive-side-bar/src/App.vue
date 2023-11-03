@@ -1,12 +1,12 @@
 <template>
   <div class="app">
-
+    <Sidebar />
     <router-view />
   </div>
 </template>
 
 <script setup>
-import Sidebard from "./components/Sidebar.vue"
+import Sidebar from "./components/Sidebar.vue"
 
 </script>
 <style Lang="scss"></style>
