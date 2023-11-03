@@ -126,4 +126,15 @@ aside {
 </style>
 ```
 
--
+- this is the logic to use the localstorage to keep the users current setting for sidebar:
+
+```
+const is_expanded = ref(localStorage.getItem('is_expanded') === "true")
+
+const ToggleMenu = () => {
+  is_expanded.value = !is_expanded.value
+
+  localStorage.setItem('is_expanded', is_expanded.value)
+}
+</script>
+```
