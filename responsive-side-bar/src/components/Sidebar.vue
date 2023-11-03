@@ -11,6 +11,26 @@
         </span>
       </button>
     </div>
+
+    <h3>Menu</h3>
+    <div class="menu">
+      <router-link class="button" to="/">
+        <span class="material-icons">home</span>
+        <span class="text">Home</span>
+      </router-link>
+      <router-link class="button" to="/about">
+        <span class="material-icons">document</span>
+        <span class="text">About</span>
+      </router-link>
+      <router-link class="button" to="/">
+        <span class="material-icons">group</span>
+        <span class="text">Team</span>
+      </router-link>
+      <router-link class="button" to="/about">
+        <span class="material-icons">email</span>
+        <span class="text">Contact</span>
+      </router-link>
+    </div>
   </aside>
 </template>
 
@@ -66,6 +86,7 @@ aside {
         .material-icons {
           color: var(--primary);
           transform: translateX(0.5rem);
+          transition: 0.2s ease-out;
         }
       }
     }
