@@ -25,3 +25,6 @@ const router = createRouter({
 createApp(App).mount("#app");
 
 ```
+
+- update main.js to use the vue-router by updating the createApp to be this: createApp(App).use(router).mount("#app");
+-

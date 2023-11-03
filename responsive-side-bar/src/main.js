@@ -5,9 +5,12 @@ import Home from "./views/Home.vue";
 
 const router = createRouter({
   history: createWebHistory(),
-  routes: {
-    path: "/",
-    component: Home,
-  },
+  routes: [
+    {
+      path: "/",
+      component: Home,
+    },
+    { path: "/about", component: () => import("./views/About.vue") },
+  ],
 });
-createApp(App).mount("#app");
+createApp(App).use(router).mount("#app");
