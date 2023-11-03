@@ -47,4 +47,5 @@ const router = createRouter({
 
 - in the components create a sidebar.vue file
 - to create a boilerplate for the page, write vue and press enter
+- update the css for the sidebar, :root is for default colors available, the \*{} is for the rests to remove any padding/etc that is on the page
 -
