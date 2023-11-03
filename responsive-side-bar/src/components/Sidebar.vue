@@ -22,11 +22,11 @@
         <span class="material-icons">document</span>
         <span class="text">About</span>
       </router-link>
-      <router-link class="button" to="/">
+      <router-link class="button" to="/team">
         <span class="material-icons">group</span>
         <span class="text">Team</span>
       </router-link>
-      <router-link class="button" to="/about">
+      <router-link class="button" to="/contact">
         <span class="material-icons">email</span>
         <span class="text">Contact</span>
       </router-link>
@@ -98,6 +98,13 @@ aside {
     transition: 0.3s
   }
 
+  h3 {
+    color: var(--grey);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+
   .menu {
     margin: 0 -1rem;
 
@@ -120,13 +127,18 @@ aside {
         transition: 0.2s ease-out;
       }
 
-      &:hover {
+      &:hover,
+      &.router-link-exact-active {
         background-color: var(--dark-alt);
 
         .material-icons,
         .text {
           color: var(--primary)
         }
+      }
+
+      &.router-link-exact-active {
+        border-right: 5px solid var(--primary);
       }
     }
 
