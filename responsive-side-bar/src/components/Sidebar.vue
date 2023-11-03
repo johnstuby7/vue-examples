@@ -61,6 +61,13 @@ aside {
         font-size: 2rem;
         color: var(--light);
       }
+
+      &:hover {
+        .material-icons {
+          color: var(--primary);
+          transform: translateX(0.5rem);
+        }
+      }
     }
   }
 
