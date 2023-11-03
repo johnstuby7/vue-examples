@@ -27,4 +27,24 @@ createApp(App).mount("#app");
 ```
 
 - update main.js to use the vue-router by updating the createApp to be this: createApp(App).use(router).mount("#app");
+- Create a router folder in source, add in index.js and cut the following out of main.js and add it to index.js
+
+```
+import { createRouter, createWebHistory } from "vue-router";
+import Home from "../views/Home.vue";
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    {
+      path: "/",
+      component: Home,
+    },
+    { path: "/about", component: () => import("../views/About.vue") },
+  ],
+});
+```
+
+- in the components create a sidebar.vue file
+- to create a boilerplate for the page, write vue and press enter
 -
