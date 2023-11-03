@@ -66,6 +66,10 @@ aside {
 
   transition: 0.2s ease-out;
 
+  .flex {
+    flex: 1 1 0;
+  }
+
   .logo {
     margin-bottom: 1rem;
 
