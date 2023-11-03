@@ -21,5 +21,10 @@ aside {
   color: var(--light);
 
   transition: 0.2s ease-out;
+
+  @media (max-width: 768px) {
+    position: fixed;
+    z-index: 99;
+  }
 }
 </style>
