@@ -7,4 +7,21 @@ Vue3 and vite responsive sidebar
 - update app to not have hello world and just be a boilerplate
 - create a views folder and add Home.vue
 - create a about.vue in the views folder
--
+- Update main.js to use vue-router, check web history, it should look like this:
+
+```
+import { createApp } from "vue";
+import App from "./App.vue";
+import { createRouter, createWebHistory } from "vue-router";
+import Home from "./views/Home.vue";
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes: {
+    path: "/",
+    component: Home,
+  },
+});
+createApp(App).mount("#app");
+
+```
