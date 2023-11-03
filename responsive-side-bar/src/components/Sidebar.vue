@@ -92,6 +92,46 @@ aside {
     }
   }
 
+  h3,
+  .button .text {
+    opacity: 0;
+    transition: 0.3s
+  }
+
+  .menu {
+    margin: 0 -1rem;
+
+    .button {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+
+      padding: 0.5rem 1rem;
+      transition: 0.2s ease-out;
+
+      .material-icons {
+        font-size: 2rem;
+        color: var(--light);
+        transition: 0.2s ease-out;
+      }
+
+      .text {
+        color: var(--light);
+        transition: 0.2s ease-out;
+      }
+
+      &:hover {
+        background-color: var(--dark-alt);
+
+        .material-icons,
+        .text {
+          color: var(--primary)
+        }
+      }
+    }
+
+  }
+
   &.is_expanded {
     width: var(--sidebar-width);
 
@@ -100,6 +140,17 @@ aside {
 
       .menu-toggle {
         transform: rotate(-180deg);
+      }
+    }
+
+    h3,
+    .button .text {
+      opacity: 1;
+    }
+
+    .button {
+      .material-icons {
+        margin-right: 1rem;
       }
     }
   }
