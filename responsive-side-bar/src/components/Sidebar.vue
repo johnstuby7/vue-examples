@@ -31,6 +31,15 @@
         <span class="text">Contact</span>
       </router-link>
     </div>
+
+    <div class="flex"></div>
+
+    <div class="menu">
+      <router-link class="button" to="/settings">
+        <span class="material-icons">settings</span>
+        <span class="text">Settings</span>
+      </router-link>
+    </div>
   </aside>
 </template>
 
