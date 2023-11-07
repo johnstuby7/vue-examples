@@ -1,7 +1,7 @@
 <template>
   <h2>{{ count }}</h2>
-  <button @click="increment">Increase</button> <br /> <br />
-  <button @click="decrease">Decrease</button>
+  <button @click="updateCount(true)">Increase</button> <br /> <br />
+  <button @click="updateCount(false)">Decrease</button>
 </template>
 
 <script>
@@ -10,18 +10,18 @@ export default {
   setup() {
     const count = ref(0);
 
-    function increment() {
-      count.value++
+    function updateCount(increase) {
+      if (increase)
+        count.value++
+      else
+        count.value--
     }
 
-    function decrease() {
-      count.value--
-    }
+
 
     return {
       count,
-      increment,
-      decrease
+      updateCount
     }
   }
 }
