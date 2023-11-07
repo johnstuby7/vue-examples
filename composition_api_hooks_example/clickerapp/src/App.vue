@@ -1,6 +1,7 @@
 <template>
   <h2>{{ count }}</h2>
-  <button @click="increment">Increase Value</button>
+  <button @click="increment">Increase</button> <br /> <br />
+  <button @click="decrease">Decrease</button>
 </template>
 
 <script>
@@ -13,9 +14,14 @@ export default {
       count.value++
     }
 
+    function decrease() {
+      count.value--
+    }
+
     return {
       count,
-      increment
+      increment,
+      decrease
     }
   }
 }
