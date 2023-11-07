@@ -1,26 +1,28 @@
 <template>
-  <h2>{{ count }}</h2>
+  <h2>{{ state.count }}, doubled = {{ state.double }}</h2>
   <button @click="updateCount(true)">Increase</button> <br /> <br />
   <button @click="updateCount(false)">Decrease</button>
 </template>
 
 <script>
-import { ref } from "vue"
+import { computed, reactive } from "vue"
+
 export default {
   setup() {
-    const count = ref(0);
+    const state = reactive({
+      count: 0,
+      double: computed(() => state.count * 2)
+    });
 
     function updateCount(increase) {
       if (increase)
-        count.value++
+        state.count++;
       else
-        count.value--
+        state.count--;
     }
 
-
-
     return {
-      count,
+      state,
       updateCount
     }
   }
