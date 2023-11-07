@@ -1,5 +1,6 @@
 <template>
   <h2>{{ count }}</h2>
+  <button @click="increment">Increase Value</button>
 </template>
 
 <script>
@@ -8,8 +9,13 @@ export default {
   setup() {
     const count = ref(0);
 
+    function increment() {
+      count.value++
+    }
+
     return {
-      count
+      count,
+      increment
     }
   }
 }
