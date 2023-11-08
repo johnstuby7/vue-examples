@@ -21,7 +21,9 @@ const firebaseConfig = {
 }
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig)
+initializeApp(firebaseConfig)
+
+const app = createApp(App)
 
 app.use(router)
 
