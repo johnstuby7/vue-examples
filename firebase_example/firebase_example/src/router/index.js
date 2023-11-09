@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { getAuth } from 'firebase/auth'
+
 import HomeView from '../views/Home.vue'
 import Register from '../views/Register.vue'
 import Signin from '../views/Signin.vue'
@@ -25,9 +27,24 @@ const router = createRouter({
     {
       path: '/feed',
       name: 'Feed',
-      component: Feed
+      component: Feed,
+      meta: {
+        requiresAuth: true
+      }
     }
   ]
 })
 
+router.beforeEach((to, from, next) => {
+  if (to.matched.some((record) => record.meta.requiresAuth)) {
+    if (getAuth().currentUser) {
+      next()
+    } else {
+      alert('You dont have access!')
+      next('/')
+    }
+  } else {
+    next()
+  }
+})
 export default router
